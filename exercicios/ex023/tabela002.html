@@ -12,6 +12,16 @@
             width: 500px;
             border-collapse: collapse;
         }
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        tbody > tr:nth-child(2n){
+            background-color: lightblue;
+        }
 
         td,th{
             border : 1px solid black;
@@ -30,10 +40,11 @@
     <h1>Uso de tabelas grandes</h1>
     
     <table>
+        <caption>População Brasileira</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -49,10 +60,14 @@
                 <td>Rio de Janeiro</td>
                 <td class="num">17 264 943</td>
             </tr>
+            <tr>
+                <td>Pernambuco</td>
+                <td class="num">18 000 000</td>
+            </tr>
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>210.147.255</strong></td>
             </tr>
         </tfoot>
